@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Droos.Models.Answer">
+    <Position X="12" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAACAAAAAAAAAAAAAAAAAAAABAAAAACASAAAA=</HashCode>
+      <FileName>Models\Answer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Droos.Models.AnswersTemplate" Collapsed="true">
+    <Position X="12.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAIAAASAAAA=</HashCode>
+      <FileName>Models\AnswersTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Droos.Models.AppDbContext" Collapsed="true">
+    <Position X="14.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACBAAEAQAQYQCAkABAAAQAAAECAAAAAAQEAEAAFgAAA=</HashCode>
+      <FileName>Models\AppDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Droos.Models.AspNetUser" Collapsed="true">
+    <Position X="12.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAEARBCAAIECICAAAQAABQAAQAAAKBUQIBAAAAQg=</HashCode>
+      <FileName>Models\AspNetUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Droos.Models.Chapter">
+    <Position X="1" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAQAAAAAAAAAQAQAAAACAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Models\Chapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Droos.Models.ChapterContent">
+    <Position X="3.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAgAAAAAABAAAAAAAAAAAAAAAEgAAAAAAAAA=</HashCode>
+      <FileName>Models\ChapterContent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Droos.Models.Content">
+    <Position X="1" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgAAAEAAIAQAAAAAAAAAQAQAAAACAAAAGUAAAACAAAA=</HashCode>
+      <FileName>Models\Content.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Droos.Models.EducationSystem">
+    <Position X="3.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAIAAAEAAAA=</HashCode>
+      <FileName>Models\EducationSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Droos.Models.Exam">
+    <Position X="10" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAQAAAAAAAAAQAAAAASCAAA=</HashCode>
+      <FileName>Models\Exam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Droos.Models.ExamTemplate">
+    <Position X="8.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAgAAAAAAAQAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Models\ExamTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Droos.Models.Governorate">
+    <Position X="3.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAQAAAACAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Models\Governorate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Droos.Models.Grade">
+    <Position X="1" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAIAAAAACAAAAAQAAAACABAAEAIAAAAAAAA=</HashCode>
+      <FileName>Models\Grade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Droos.Models.PayableItem">
+    <Position X="6" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAQAEAAEwAAAAAAAIAAAAAAAAAAAAAAEgAEAIAQAAA=</HashCode>
+      <FileName>Models\PayableItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Droos.Models.QuestionTemplate">
+    <Position X="8" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAQAAAAAAAAAQAAAAASAAAA=</HashCode>
+      <FileName>Models\QuestionTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Droos.Models.Section">
+    <Position X="1" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAQAQAAAACAAAAAAAAAAAQAQA=</HashCode>
+      <FileName>Models\Section.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Droos.Models.Subject">
+    <Position X="1" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAEAAAAAQAQAAAACAAAAEAAAAAEAAAA=</HashCode>
+      <FileName>Models\Subject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Droos.Models.SubjectSection">
+    <Position X="3.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAABAAAIAAAAAAAAAAAAAAAAAAAIAQAAA=</HashCode>
+      <FileName>Models\SubjectSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Droos.Models.Subscription">
+    <Position X="6.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAIEAAQAAAAAAAAQAAAAAAAAAAAAAAAAAgAAIA=</HashCode>
+      <FileName>Models\Subscription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
