@@ -25,7 +25,7 @@ internal class Program
         builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options => options.SignIn.RequireConfirmedAccount = true)
             .AddEntityFrameworkStores<AppDbContext>()
             .AddDefaultTokenProviders();
-        
+        builder.Services.AddScoped<IBlobStorageRepo, BlobStorageRepo>();
         builder.Services.AddScoped<IRepoBase<Content>, RepoBase<Content>>();
         builder.Services.AddScoped<IRepoBase<Chapter>, RepoBase<Chapter>>();
         builder.Services.AddScoped<IExamTemplateRepo, ExamTemplateRepo>();
