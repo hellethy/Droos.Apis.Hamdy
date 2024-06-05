@@ -16,7 +16,7 @@ namespace Droos.Api.Controllers
             _blobStorageRepo = blobStorageRepo;
         }
 
-        [HttpPost("Upload")]finish endpointc
+        [HttpPost("Upload")]
         public async Task<ActionResult<Blob>> UploadFile(IFormFile file)
         {
             if (file == null || file.Length == 0)

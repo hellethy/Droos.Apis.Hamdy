@@ -11,27 +11,27 @@ namespace Droos.Api.Controllers
     [ApiController]
     public class ContentController : ControllerBase
     {
-        private readonly IRepoBase<Content> _repoBase;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public ContentController(IRepoBase<Content> repoBase, IMapper mapper)
+        public ContentController(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            _repoBase = repoBase;
+            _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CreateContentDto>>> GetContentes()
         {
-            var contentes = await _repoBase.GetAll();
+            var contentes = await _unitOfWork.Contentes.GetAll();
             var createContentDto = _mapper.Map<IEnumerable<CreateContentDto>>(contentes);
             return Ok(createContentDto);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<CreateContentDto>> GetContentById(Guid id)
+        public async Task<ActionResult<CreateContentDto>> GetContent(Guid id)
         {
-            var content = await _repoBase.GetById(id);
+            var content = await _unitOfWork.Contentes.GetById(id);
 
             if (content == null)
             {
@@ -45,11 +45,11 @@ namespace Droos.Api.Controllers
         public async Task<ActionResult<CreateContentDto>> CreateContent(CreateContentDto createContentDto)
         {
             var content = _mapper.Map<Content>(createContentDto);
-            await _repoBase.Add(content);
+            await _unitOfWork.Contentes.Add(content);
 
             var createdContentDto = _mapper.Map<CreateContentDto>(content);
 
-            return CreatedAtAction(nameof(GetContentById),
+            return CreatedAtAction(nameof(GetContent),
                 new
                 {
                     contentId = createContentDto.ContentId,
@@ -78,7 +78,7 @@ namespace Droos.Api.Controllers
                 return BadRequest();
             }
             var content = _mapper.Map<Content>(createContentDto);
-            await _repoBase.Update(content);
+            await _unitOfWork.Contentes.Update(content);
             return NoContent();
         }
 
@@ -86,7 +86,7 @@ namespace Droos.Api.Controllers
         public async Task<ActionResult<Content>> DeleteContent(Guid id)
         {
 
-            await _repoBase.Delete(id);
+            await _unitOfWork.Contentes.Delete(id);
             return NoContent(); ;
         }
     }

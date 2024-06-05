@@ -5,7 +5,7 @@ namespace Droos.Models;
 
 public partial class Content
 {
-    public Guid ContentId { get; set; }
+    public Guid ContentId { get; set; } = Guid.NewGuid();
 
     public string Name { get; set; } = null!;
 

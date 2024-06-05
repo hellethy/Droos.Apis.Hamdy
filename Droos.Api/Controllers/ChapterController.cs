@@ -11,27 +11,27 @@ namespace Droos.Api.Controllers
     [ApiController]
     public class ChapterController : ControllerBase
     {
-        private readonly IRepoBase<Chapter> _repoBase;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public ChapterController(IRepoBase<Chapter> repoBase, IMapper mapper)
+        public ChapterController(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            _repoBase = repoBase;
+            _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CreateChapterDto>>> GetChapters()
         {
-            var chapters = await _repoBase.GetAll();
+            var chapters = await _unitOfWork.Chapters.GetAll();
             var createChapterDto = _mapper.Map<IEnumerable<CreateChapterDto>>(chapters);
             return Ok(createChapterDto);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<CreateChapterDto>> GetChapterById(Guid id)
+        public async Task<ActionResult<CreateChapterDto>> GetChapter(Guid id)
         {
-            var chapter = await _repoBase.GetById(id);
+            var chapter = await _unitOfWork.Chapters.GetById(id);
 
             if (chapter == null)
             {
@@ -45,11 +45,11 @@ namespace Droos.Api.Controllers
         public async Task<ActionResult<CreateChapterDto>> CreateChapter(CreateChapterDto createChapterDto)
         {
             var chapter = _mapper.Map<Chapter>(createChapterDto);
-            await _repoBase.Add(chapter);
+            await _unitOfWork.Chapters.Add(chapter);
 
             var createdChapterDto = _mapper.Map<CreateChapterDto>(chapter);
 
-            return CreatedAtAction(nameof(GetChapterById),
+            return CreatedAtAction(nameof(GetChapter),
                 new
                 {
                     chapterId = createChapterDto.ChapterId,
@@ -57,7 +57,7 @@ namespace Droos.Api.Controllers
                     creationOn = createChapterDto.CreatedOn
                 },
                     createdChapterDto
-                );
+                ); 
 
 
         }
@@ -71,7 +71,7 @@ namespace Droos.Api.Controllers
                 return BadRequest();
             }
             var chapter = _mapper.Map<Chapter>(createChapterDto);
-            await _repoBase.Update(chapter);
+            await _unitOfWork.Chapters.Update(chapter);
             return NoContent();
         }
 
@@ -79,7 +79,7 @@ namespace Droos.Api.Controllers
         public async Task<ActionResult<Chapter>> DeleteChapter(Guid id)
         {
 
-            await _repoBase.Delete(id);
+            await _unitOfWork.Chapters.Delete(id);
             return NoContent(); ;
         }
     }
